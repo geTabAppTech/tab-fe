@@ -41,3 +41,6 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+      - name: Setup environment variables
+        run: |
+          echo "EXPO_PUBLIC_API_URL=https://d16qf4d275eo4z.cloudfront.net/graphql" >> $GITHUB_ENV
